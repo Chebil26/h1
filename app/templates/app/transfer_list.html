@@ -1,0 +1,48 @@
+hello 
+
+
+
+{% block content %}
+
+
+   <br>
+
+
+<h2> List of applicants  </h1>
+
+
+<div>
+
+    <table>
+        <tr>
+            <th>num  </th>
+            <th>first name  </th>
+            <th>last name </th>
+            <th>wilaya </th>
+            <th>original university </th>
+            <th>level </th>
+            <th>wished specialty </th>
+            <th>Detail </th>
+            
+        </tr>
+        {%for s in object_list%}
+
+            <tr>
+                <td>{{s.id}}</td>
+                <td>{{s.first_name}}  </a> </td>
+                <td>{{s.last_name}}   </td>
+                <td>{{s.wilaya}}   </td>
+                <td>{{s.orginal_uni}}   </td>
+                <td>{{s.level}}   </td>
+                <td>{{s.spe_choice}}   </td>
+                <td> <a href='{{s.id}}/'> detail </td>
+
+                
+            </tr>
+       {% endfor %}
+    </table>
+    
+</div>
+
+
+ {% endblock content %}

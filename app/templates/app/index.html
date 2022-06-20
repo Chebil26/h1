@@ -1,0 +1,11 @@
+
+
+<h3 class="h">transfer Form</h3>
+<hr>
+
+<form action="" method="post" enctype=multipart/form-data >
+	{% csrf_token %}
+	{{form.as_ul}}
+	<input type="submit">
+	
+</form>
